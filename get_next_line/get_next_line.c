@@ -6,7 +6,7 @@
 /*   By: dogucankel <dogucankel@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 16:34:47 by dogucankel        #+#    #+#             */
-/*   Updated: 2022/12/13 16:42:08 by dogucankel       ###   ########.fr       */
+/*   Updated: 2026/10/19 17:11:11 by dogucankel       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,6 @@ char	*ft_read_and_save(int fd, char *save)
 	buff = malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (!buff)
 		return (NULL);
-		printf("%s", "not error");
 	read_bytes = 1;
 	while (!ft_findchr(save, '\n') && read_bytes != 0)
 	{
@@ -99,8 +98,6 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
-
-	printf("%s", save);
 	save = ft_read_and_save(fd, save);
 	if (!save)
 		return (NULL);
@@ -108,7 +105,7 @@ char	*get_next_line(int fd)
 	save = ft_save(save);
 	return (line);
 }
-
+/*
 #include <fcntl.h>
 int main()
 {
@@ -120,4 +117,4 @@ int main()
 	printf("%s", buffer);
 
 	return 0;
-}
+}*/

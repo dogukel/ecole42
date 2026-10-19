@@ -1,1 +1,6 @@
 *.iso
+.DS_Store
+a.out
+*.o
+xcuserdata/
+continue/
